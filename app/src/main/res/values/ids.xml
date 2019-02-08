@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="date_event" type="id"/>
+    <item name="time_event" type="id"/>
+    <item name="club_home" type="id"/>
+    <item name="club_away" type="id"/>
+    <item name="home_score" type="id"/>
+    <item name="away_score" type="id"/>
+    <item name="name_league" type="id"/>
+    <item name="vs" type="id"/>
+
+    <item name="MP" type="id"/>
+    <item name="W" type="id"/>
+    <item name="D" type="id"/>
+    <item name="L" type="id"/>
+    <item name="GF" type="id"/>
+    <item name="GA" type="id"/>
+    <item name="GD" type="id"/>
+    <item name="PTS" type="id"/>
+
+    <item name="next_list" type="id"/>
+    <item name="spinner_league" type="id"/>
+    <item name="last_list" type="id"/>
+    <item name="standing_list" type="id"/>
+    <item name="img_club" type="id"/>
+    <item name="name_club" type="id"/>
+    <item name="name_player" type="id"/>
+    <item name="thumb_player" type="id"/>
+    <item name="alert" type="id"/>
+</resources>

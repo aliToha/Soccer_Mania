@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Football Mania</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="next_event">Next Events</string>
+    <string name="last_event">Last Events</string>
+    <string name="my_team">MY TEAM</string>
+    <string name="match">MATCH</string>
+    <string name="vs">VS</string>
+    <string name="card">Cards</string>
+    <string name="detail_match">Match Detail</string>
+    <string name="schedule_match">Match Schedule</string>
+    <string name="my_schedule">My Schedule</string>
+    <string name="goal">Goal</string>
+    <string name="shoot">Shots</string>
+    <string name="yellow">Yellow Cards</string>
+    <string name="red">Red Cards</string>
+    <string name="lineup">Line up</string>
+    <string name="keeper">Keeper</string>
+    <string name="defense">Defense</string>
+    <string name="midfield">Midfield</string>
+    <string name="forward">Forward</string>
+    <string name="substitutes">Substitutes</string>
+    <string name="schedule">Schedule</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
+    <string name="swipe">Swipe left to delete</string>
+    <string name="remove">Remove from schedule</string>
+    <string name="remove_club">Remove from favorite</string>
+    <string name="add">Add to schedule</string>
+    <string name="add_club">Add to favorite</string>
+    <string name="empty">EMPTY</string>
+    <string name="league">League</string>
+    <string name="standing">Standing</string>
+    <string name="favorite">Favorite</string>
+    <string name="team">Team</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="players">PLAYERS</string>
+    <string name="MP">MP</string>
+    <string name="W">W</string>
+    <string name="D">D</string>
+    <string name="L">L</string>
+    <string name="GF">GF</string>
+    <string name="GA">GA</string>
+    <string name="GD">GD</string>
+    <string name="PTS">PTS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

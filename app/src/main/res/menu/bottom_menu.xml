@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent">
+    <item
+            android:id="@+id/standing"
+            android:icon="@drawable/ic_cup"
+            android:title="@string/standing"
+            android:enabled="true"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:enabled="true"
+            android:id="@+id/schedule"
+            android:title="@string/schedule"
+            android:icon="@drawable/ic_time"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/team"
+            android:icon="@drawable/ic_soccer_ball"
+            android:title="@string/team"
+            android:enabled="true"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/ic_star_button"
+            android:title="@string/favorite"
+            android:enabled="true"
+            app:showAsAction="ifRoom"/>
+</menu>

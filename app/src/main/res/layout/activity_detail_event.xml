@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".detail.DetailEvent">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/detail_match"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <ProgressBar
+                    android:id="@+id/progress_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"/>
+
+            <TextView
+                    android:id="@+id/date_event_detail"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    style="@style/Text.Title"/>
+            <TextView
+                    android:id="@+id/time_event_detail"
+                    android:gravity="center"
+                    android:layout_below="@id/date_event_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                    android:layout_below="@+id/time_event_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/horizontal_frame">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_alignParentStart="true"
+                        >
+
+                    <ImageView
+                            android:id="@+id/img_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/home_club"
+                            android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/score_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_toStartOf="@+id/vs"
+                        android:layout_centerVertical="true"
+                        style="@style/Text.Title"/>
+
+                <TextView
+                        android:id="@+id/vs"
+                        style="@style/Text.Value"
+                        android:text="@string/vs"
+                        android:layout_alignParentTop="false"/>
+
+                <TextView
+                        android:id="@+id/score_away"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_toEndOf="@+id/vs"
+                        android:layout_centerVertical="true"
+                        style="@style/Text.Title"/>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_alignParentEnd="true">
+
+                    <ImageView
+                            android:id="@+id/img_away"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/away_club"
+                            android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/colorLine"
+                    android:layout_below="@+id/horizontal_frame"
+                    android:id="@+id/line1">
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_below="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontal_goal">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_goal"
+                        android:layout_toStartOf="@+id/goal"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/goal"
+                        style="@style/Text.Value"
+                        android:text="@string/goal"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_goal"
+                        android:layout_toEndOf="@+id/goal"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/horizontal_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontal_shoot">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_shoot"
+                        android:layout_toStartOf="@+id/shoot"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/shoot"
+                        android:text="@string/shoot"
+                        style="@style/Text.Value"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_shoot"
+                        android:layout_toEndOf="@+id/shoot"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/colorLine"
+                    android:layout_below="@+id/horizontal_shoot"
+                    android:id="@+id/line">
+            </LinearLayout>
+
+            <TextView
+                    android:layout_below="@+id/line"
+                    android:id="@+id/cards"
+                    android:text="@string/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+            <RelativeLayout
+                    android:layout_below="@+id/cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontal_yellow">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_yellow"
+                        android:layout_toStartOf="@+id/yellow_card"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/yellow_card"
+                        android:background="@color/colorYellow"
+                        android:layout_width="40dp"
+                        android:layout_height="10dp"
+                        style="@style/Text.Value"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_yellow"
+                        android:layout_toEndOf="@+id/yellow_card"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/horizontal_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontal_red">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_red"
+                        android:layout_toStartOf="@+id/red_cards"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/red_cards"
+                        android:background="@color/colorRed"
+                        android:layout_width="40dp"
+                        android:layout_height="10dp"
+                        style="@style/Text.Value"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_red"
+                        android:layout_toEndOf="@+id/red_cards"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/colorLine"
+                    android:layout_below="@+id/horizontal_red"
+                    android:id="@+id/line2">
+            </LinearLayout>
+
+            <TextView
+                    android:layout_below="@+id/line2"
+                    android:id="@+id/lineup"
+                    android:text="@string/lineup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+            <RelativeLayout
+                    android:layout_below="@+id/lineup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_goalkeeper">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_keeper"
+                        android:layout_toStartOf="@+id/keeper"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/keeper"
+                        android:text="@string/keeper"
+                        style="@style/Text.Value"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_keeper"
+                        android:layout_toEndOf="@+id/keeper"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/container_goalkeeper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_defense">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_defense"
+                        android:layout_toStartOf="@+id/defense"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/defense"
+                        android:text="@string/defense"
+                        style="@style/Text.Value"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_defense"
+                        android:layout_toEndOf="@+id/defense"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/container_defense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_midfield">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_midfield"
+                        android:layout_toStartOf="@+id/midfield"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/midfield"
+                        style="@style/Text.Value"
+                        android:text="@string/midfield"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_midfield"
+                        android:layout_toEndOf="@+id/midfield"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/container_midfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_forward">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_forward"
+                        android:layout_toStartOf="@+id/forward"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/forward"
+                        style="@style/Text.Value"
+                        android:text="@string/forward"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_forward"
+                        android:layout_toEndOf="@+id/forward"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/container_forward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_substitutes">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_substitutes"
+                        android:layout_toStartOf="@+id/substitutes"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                        android:id="@+id/substitutes"
+                        style="@style/Text.Value"
+                        android:text="@string/substitutes"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/away_substitutes"
+                        android:layout_toEndOf="@+id/substitutes"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
+
